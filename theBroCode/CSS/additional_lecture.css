@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(75, 202, 202);
+    color: white;
+    font-size: 21px;
+} 
+h1 {
+    font-size: 70px;
+    color: #3747b3;
+}
+
+p {
+    color: #3747b3;
+}
+
+.box{
+    background-color: pink;
+    width: 300px;
+    margin: 50px;
+    /*border has three properties and hypothetically the most complicated oen drom all of them */ 
+    /*the order of properties is important in Cascading Style Sheets  */ 
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+
+    padding: 50px;
+    /*the main intricacies here is that witout the border it is hard to spot any difference but with border that becomms clear */ 
+}
+

@@ -1,0 +1,15 @@
+div{
+    background-color: red;
+    width: 100px;
+    height:  100px;
+    display: inline-block;
+    visibility: hidden;
+    /*none is like more nomore exit but visibility: hidden is like more hidden but is taking place */
+}
+
+span{
+    background-color: blue;
+    width: 100px;
+    height:  100px;
+    display: inline-block;
+}

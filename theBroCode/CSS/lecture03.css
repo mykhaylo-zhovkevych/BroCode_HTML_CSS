@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Nabla; /* here i can give my own name for the font naming*/
+    src: url(fonts/Nabla-Regular-VariableFont_EDPT,EHLT.ttf);
+}
+body{
+    background-color: #1b83e6;
+}
+h1{
+    font-family: Verdana, Arial, sans-serif;
+}
+/* The font-family property in CSS is used to specify the font or list of fonts to be used for
+ text rendering within an element. This property allows you to define a prioritized list of font family names or generic
+  font family names, ensuring that the browser will attempt to use the first available font in the list. */
+p{
+    font-family: "Nabla", "Honk";
+    font-size: 50px;
+    font-weight: normal;
+    font-style: italic;
+
+}
+/*em is another standart of measurement man can think of it like one em is equal to 100 %*/

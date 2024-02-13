@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--post  is fore valuable inforamtion and get fot non-sessible data like name, preferences etc-->
+<form action="" method="post">
+    <label for="username">username:</label>
+    <input type="text" id="username" placeholder="hereyourdata" minlength="6" required><br>
+    <input type="submit">
+<br><br>
+    <label for="password">password:</label>
+    <input type="text" id="password" placeholder="password" minlength="6" maxlength="7" required><br>
+    <input type="submit"> <input type="reset">
+<br><br>
+    <label for="email">email:</label>
+    <input type="email" id="email" placeholder="emial@eample.com"required>
+    <br><input type="submit"> <input type="reset">
+<br><br>
+    <label for="phone">phone:</label>
+    <input type="tel" id="phone" placeholder="123-123-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+    <br><input type="submit"> <input type="reset">
+
+    <label for="bday">birthday</label><br><br>
+    <input type="date" id="bday">
+
+    <label for="quantity">quantity:</label><br><br>
+    <input type="number" value="1" id="quantity"  min="0" max="99">
+
+    <label for="title">title:</label>
+            <label for="Mr.">Mr.</label>
+            <input type="radio" id="Mr." name="title" value="Mr.">
+            <label for="Mrs.">Mrs.</label>
+            <input type="radio" id="Mrs." name="title" value="Mrs.">
+            <label for="PhD.">PhD.</label>
+            <input type="radio" id="PhD." name="title" value="PhD.">
+
+</form>
+</body>
+<br><br><br><br>
+<body>
+
+
+<!--use the enctype="multipart/form-data if large files like iamge will be processed -->
+    <form action="action_page.php" method="POST"  enctype="multipart/form-data">
+
+
+
+        <div>
+
+            <label for="fname">first name:</label>
+
+            <input type="text" id="fname" name="fname" placeholder="Spongebob" required>
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <div>
+
+            <label for="lname">last name:</label>
+
+            <input type="text" id="lname" name="lname" placeholder="Squarepants" required>
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <div>
+
+            <label for="pass">password:</label>
+
+            <input type="password" id="pass" name="pass" maxlength="12" required>
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <div>
+
+            <label for="email">email:</label>
+
+            <input type="email" id="email" name="email" placeholder="SPants@gmail.com">
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <div>
+
+            <label for="phone">phone #:</label>
+
+            <input type="tel" id="phone" name="phone" placeholder="(123)-456-7890">
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <div>
+
+            <label for="bdate">birthdate:</label>
+
+            <input type="date" id="bdate" name="bdate">
+
+        </div>
+
+        
+
+        <br>
+
+
+
+        <div>
+
+            <label for="quantity">quantity:</label>
+
+            <input type="number" id="quantity" name="quantity" min="0" max="99" value="1">
+
+        </div>
+
+        
+
+        <br>
+
+
+
+        <div>
+
+            <label for="title">title:</label>
+
+
+
+            <label for="Mr.">Mr.</label>
+
+            <input type="radio" id="Mr." name="title" value="Mr.">
+
+
+
+            <label for="Mrs.">Mrs.</label>
+
+            <input type="radio" id="Mrs." name="title" value="Mrs.">
+
+
+
+            <label for="PhD.">PhD.</label>
+
+            <input type="radio" id="PhD." name="title" value="PhD.">
+
+        </div>
+
+        
+
+        <br>
+
+
+
+        <div>
+
+            <label for="payment">payment:</label>
+
+            <select id="payment" name="payment">
+
+                <option value="visa">visa</option>
+
+                <option value="mastercard">mastercard</option>
+
+                <option value="giftcard">giftcard</option>
+
+            </select>
+
+        </div>
+
+        
+
+        <br>
+
+
+
+        <div>
+
+            <label for="subscribe">subscribe:</label>
+
+            <input type="checkbox" id="subscribe" name="subscribe" min="0" max="99" value="1">
+
+        </div>
+
+        
+
+        <br>
+
+
+        <div>
+            <label for="file">file:</label>
+            <input type="file" id="file" accept="image/png">
+
+        </div>
+
+<br>
+
+        <div>
+            <label for="comment">comment:</label>
+            <textarea id="file" rows="3" cols="25" > </textarea>
+
+        </div>
+
+        <br>
+
+
+        <div>
+
+            <input type="reset">
+
+        </div>
+
+
+
+        <br>
+
+
+
+        <div>
+
+            <input type="submit">
+
+        </div>
+
+
+
+    </form>
+
+
+
+</body>
+
+</html>

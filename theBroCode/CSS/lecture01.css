@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+}
+h1 {
+    color: white;
+}
+p {
+color: white;
+
+}
+#p1{
+    color: blue;
+}
+#p2{
+    color:blueviolet;
+}
+.oss{
+    color: aqua;
+    padding-bottom: 10px;
+}
