@@ -1,0 +1,19 @@
+#container{
+    border: 2px solid;
+}
+/*this is descendant combinator (just empty space)*/
+#container p{
+    background-color: yellow;
+
+}
+/*this is child combinator (just > sigh)*/
+#container > p{
+    background-color: rgb(255, 0, 0);
+
+
+}
+#container ~ p{
+    background-color: rgb(91, 26, 197);
+
+
+}

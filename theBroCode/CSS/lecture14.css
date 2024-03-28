@@ -1,0 +1,27 @@
+a:link{
+    color: blueviolet;
+}
+a:hover{
+    color: black;
+}
+a:visited{
+    color: brown;
+}
+li:hover{
+    background-color: blue;
+}
+li:not(:hover){
+    background-color: rgb(181, 181, 187);
+}
+li:nth-child(4n){
+    background-color: rgb(38, 0, 0);
+}
+#greeting p{
+    background-color: chartreuse;
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: block;
+}
+/*pseudo-classes*/
