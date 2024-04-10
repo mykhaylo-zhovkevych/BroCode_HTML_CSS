@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+ol {
+
+    /*list-style-type: armenian;*/
+
+    padding: 0;
+    list-style-type: none;
+
+}
+
+ul {
+
+list-style: square;    
+list-style-position: inside;
+text-align: center;
+color: blue;
+line-height: 1.6;
+list-style-image: url('/cssDaveGray/HTML/images/checkmark.png');
+list-style: url('/cssDaveGray/HTML/images/checkmark.png')
+inside;
+
+}
+ul li:nth-child(2) {
+
+  color: brown;
+
+}
+/*Pseudo-element in CSS is a keyword added to a selector that lets you style a specific part of the selected element(s). Pseudo-elements allow you to target elements not explicitly defined in the document tree. For example, you can style the first line or first letter of a text block, insert content before or after an element's content, or even style selections of text. They are incredibly useful for adding decorative features and enhancing the structure and presentation of web content without the need to add extra HTML elements*/
+ul ::marker {
+  color: rgb(255, 0, 0);
+  font-family: fantasy;
+  font-size: 1em;
+  content: "Only $5 >>";
+}
+
