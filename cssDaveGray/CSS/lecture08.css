@@ -33,3 +33,7 @@ body {
   column-span: all;
   margin-top: 2rem;
 }
+
+.nonwrap {
+white-space: nowrap;
+}
