@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
+
+.columns {
+    column-count: 4;
+    column-width: 250px;
+    column-rule: 3px solid tan;
+
+}
+/* This property is more specific than a class that uses p, so this property overrides the defined property in another class that uses p  */
+.columns p {
+    margin-top: 0;
+}
+
+.columns h2 {
+  margin-top: 0;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  break-inside: avoid; /* avoids the non-desired position of the element */
+ /*  break-before: column; */ /* this make space ater the h2 was resized  */
+
+}
+
+.columns .quote {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #703a3a;
+  column-span: all;
+  margin-top: 2rem;
+}
