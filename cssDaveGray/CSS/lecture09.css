@@ -66,4 +66,49 @@ body {
     top: 0;
     /* this like wehn it scrolls down it stays above but until the defined container */
    }
-   
+
+   html {scroll-behavior: smooth;}
+
+   section{
+    height: 100vh;
+
+   }
+
+   .blue { background-color: #00f;}
+   .red { background-color: rgb(255, 0, 0);}
+   .green { background-color: rgb(0, 255, 38);}
+
+   header, footer {
+    color: #ffffff;
+    text-align: center;
+    height: 100px;
+    
+  }
+    header {
+      position: sticky;
+      top: 0;
+      font-size: 5rem;
+    } 
+    footer {
+      background-color: #000;
+      /* position: fixed; */
+      position: sticky;
+      bottom: 0;
+      /* width: 100%; */
+      font-size: 3rem;
+    }
+    a:visited {
+      color: white;
+
+    }
+    .social {
+      background-color: #00f;
+      color: #ffffff;
+      font-size: inherit;
+      padding: 1rem;
+      position: fixed;
+      top: 30%;
+      left: 0;
+      z-index: 1;
+
+    }
