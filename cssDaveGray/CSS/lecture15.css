@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Pseudo-Classes
+
+A pseudo-class is used to define a special state of an element. It can be used to style an element when it's in a certain state or condition that is not tied to its hierarchy in the document. Pseudo-classes begin with a colon (:). Here are some common examples:
+
+    :hover — Applies styles when the user hovers over an element with the mouse.
+    :focus — Applies styles when the element has focus (clicked on or tabbed into).
+    :active — Applies styles when the element is being activated (clicked on).
+    :checked — Applies styles to input elements like checkboxes or radio buttons when they are checked.
+    :nth-child() — Applies styles based on the element's position in a group of siblings.
+
+Pseudo-Elements
+
+A pseudo-element is used to style specified parts of an element. Unlike pseudo-classes, pseudo-elements allow you to style a part of an element rather than the whole thing. Pseudo-elements begin with two colons (::) to differentiate them from pseudo-classes. Here are some common examples:
+
+    ::before — Inserts content before the content of an element and styles that content.
+    ::after — Inserts content after the content of an element and styles that content.
+    ::first-line — Applies styles to the first line of text in a block-level element.
+    ::first-letter — Applies styles to the first letter of the first line of a block-level element.
+    ::selection — Applies styles to the portion of an element that is selected by the user.
+
+ */
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* || UTILITY CLASSES */
+  .nowrap {
+    white-space: nowrap;
+  }
+  
+  /* || GENERAL STYLES */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font: 1.5rem "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke, #475569);
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+/* ----------------------------------------------------------------------------  */
+/* NOW NOT HEIGH SPECIFICITY 0,0,1 can be esely owerwritten  */
+  :is(header, footer) {
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+  }
+/* another sudo class is :where it does not have any specificity at all */
+/* ----------------------------------------------------------------------------  */
+  header {
+    top: 0;
+  }
+  
+  nav {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-bottom: 2px solid #000;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+  }
+/* ----------------------------------------------------------------------------  */
+  /* nav a,
+  nav a:visited {
+    color: #000000;
+  } */
+  nav a:any-link {
+    color: #000;
+  }
+/* ----------------------------------------------------------------------------  */
+ /*  nav a:hover,
+  nav a:focus {
+    color: hsla(0, 0%, 20%, 0.6);
+  } */
+/* do the same but in more short way */
+  nav :is(a:hover, a:focus) {
+    color: hsla(0, 0%, 20%, 0.6);
+  }
+/* ----------------------------------------------------------------------------  */
+  nav a:active {
+    color: red;
+  }
+
+/* ----------------------------------------------------------------------------  */
+
+  main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  footer {
+    bottom: 0;
+  }
+  
+  /* || PROFILE CARD */
+  .card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: #cbd5e1;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+/* ----------------------------------------------------------------------------  */
+/* target looks whoever is selected will recive the css code */
+  .card:target {
+    border: 2px solid rebeccapurple;
+  }
+
+/* ----------------------------------------------------------------------------  */
+  
+  .card figure {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  
+  .card img {
+    border: 5px double #333;
+    border-radius: 50%;
+  }
+
+/* ----------------------------------------------------------------------------  */
+/* this can be used to check if some alt was forgotten or wehn i do it so: .card img:[alt] new code can be added  */
+  .card img:not([alt]) {
+    border: 10px solid red;
+
+  }
+
+/* ----------------------------------------------------------------------------  */
+/*   .card:nth-child(2)  */  .card:nth-child(even){
+/* this class will base the positiopjn based upto the html order even if the media queries has changed something it will not effect this class */
+    background-color: papayawhip;
+  }
+
+
+/* ----------------------------------------------------------------------------  */
+
+  .card figcaption {
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+  }
+/* ----------------------------------------------------------------------------  */
+/* this is not really a elemnt so i cant select it as the rest of the text */
+/*  .card figcaption::before   */
+    .card figcaption::after {
+    content: "|...--...|";
+    display: block;
+  }
+
+  .card figcaption::first-letter {
+    font-size: 3rem;
+  }
+
+  .card p {
+    position: relative;
+  }
+
+  .card p::before {
+    content: open-quote;
+    font-size: 2em;
+    position: absolute;
+    top: -0.5em;
+  }
+  .card p::after {
+    content: close-quote;
+    font-size: 2em;
+    position: absolute;
+    right: -0.5em;
+  }
+/* ----------------------------------------------------------------------------  */
+  /* || SMALL */
+  @media screen and (min-width: 576px) {
+    main {
+      justify-content: center;
+      flex-flow: row wrap;
+      padding: 1rem;
+    }
+  
+    .card {
+      width: min(100%, 400px);
+    }
+  
+    .card:last-child {
+      order: -1;
+    }
+  }
+  
+  /* || MEDIUM */
+  @media screen and (min-width: 768px) {
+    nav {
+      display: none;
+    }
+  
+    .card {
+      width: min(100%, 325px);
+    }
+  
+    .card figure {
+      flex-flow: column-reverse;
+    }
+  
+    .card p {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* || LARGE */
+  @media screen and (min-width: 992px) {
+    .card {
+      width: min(100%, 400px);
+    }
+  
+    .card:nth-child(2) {
+      order: -1;
+    }
+  }
+  
+  /* || XL  */
+  @media screen and (min-width: 1200px) {
+    .card {
+      /* Remove calc() - min() supports math! */
+      width: min(33% - 1rem, 500px);
+    }
+  }
+  
+  /* || MOBILE DEVICE LANDSCAPE  */
+  @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav {
+      display: none;
+    }
+  
+    main {
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      align-items: stretch;
+    }
+  
+    .card {
+      /* Remove calc() - min() supports math! */
+      width: min(33% - 0.25rem, 200px);
+    }
+  
+    .card figcaption,
+    .card p {
+      font-size: 1.25rem;
+    }
+  }

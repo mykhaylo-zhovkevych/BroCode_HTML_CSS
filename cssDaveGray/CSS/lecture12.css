@@ -7,8 +7,13 @@
   box-sizing: border-box;
 }
 
-img { display: block; }
+/* this is sets theomg to the block level because the img by default is inline element  */
+img {
+   display: block; 
+  
+  }
 /* End Reset */ 
+
 
 /* Utility Classes */
 .nowrap {
@@ -35,8 +40,9 @@ body {
 }
 
 .container {
-  background-color: rgb(251, 210, 156);
+  background-color: hsla(0, 88%, 39%, 0.24);
   background-image: url('../img/map-2176x1451.png');
+  
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -50,7 +56,7 @@ body {
   align-items: center;
   gap: 30px;
 
-  background-color: hsla(0, 0%, 100%, 0.35);
+  background-color: hsla(0, 0%, 0%, 0);
 
 }
 
