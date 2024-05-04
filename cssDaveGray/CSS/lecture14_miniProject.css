@@ -20,14 +20,14 @@ img {
 
 /* || GENERAL STYLES */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 body {
   font: 1.5rem "Nunito", sans-serif;
   min-height: 100vh;
-  background-color: #475569;
-  background-image: radial-gradient(whitesmoke, #475569);
+  background-color: #ffffff;
+  background-image: radial-gradient(rgb(146, 69, 69), #3b3b3b);
   display: flex;
   flex-direction: column;
 }
@@ -80,7 +80,7 @@ footer {
 .card {
   scroll-margin-top: 8rem;
   width: min(100%, 350px);
-  background-color: #cbd5e1;
+  background-color: #0073ff34;
   border: 2px solid #000;
   border-radius: 15px;
   padding: 1rem;
